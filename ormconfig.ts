@@ -1,14 +1,13 @@
+console.log('process.env.DATABASE.URL :>> ', process.env.DATABASE_URL);
+
 const config = {
   type: 'postgres',
-  host: process.env.PG_HOST,
-  port: Number(process.env.PG_PORT),
-  username: process.env.PG_USER,
-  password: process.env.PG_PASSWORD,
-  database: process.env.PG_DATABASE,
-  entities: ['./src/models/*.ts'],
-  migrations: ['./src/database/migrations/*.ts'],
+  url: process.env.DATABASE_URL,
+  entities: ['./dist/models/**/*.js'],
+  migrations: ['./dist/database/migrations/**/*.js'],
   cli: {
     migrationsDir: './src/database/migrations ',
+    entitiesDir: './src/models',
   },
 };
 
