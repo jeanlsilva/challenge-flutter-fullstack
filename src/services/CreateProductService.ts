@@ -46,7 +46,7 @@ class CreateProductService {
       category,
     });
 
-    productsRepository.save(product);
+    await productsRepository.save(product);
 
     return product;
   }
