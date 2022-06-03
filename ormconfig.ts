@@ -1,6 +1,4 @@
-import { ConnectionOptions } from 'typeorm';
-
-const config: ConnectionOptions = {
+const config = {
   type: 'postgres',
   host: process.env.PG_HOST,
   port: Number(process.env.PG_PORT),
