@@ -9,6 +9,12 @@ const config = {
     migrationsDir: '/src/database/migrations ',
     entitiesDir: '/src/models',
   },
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 };
 
 module.exports = config;
