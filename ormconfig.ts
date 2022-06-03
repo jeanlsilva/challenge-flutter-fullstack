@@ -14,4 +14,4 @@ const config: ConnectionOptions = {
   },
 };
 
-module.exports = config;
+export default config;
