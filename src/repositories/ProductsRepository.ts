@@ -28,7 +28,7 @@ class ProductsRepository extends Repository<Product> {
   ): Promise<ProductWithCategory[]> {
     let products: Product[] = [];
 
-    const filter = filterCriteria?.split('=');
+    const filter = filterCriteria ? filterCriteria.split('=') : [];
 
     if (orderCriteria !== null) {
       products = await this.find({
