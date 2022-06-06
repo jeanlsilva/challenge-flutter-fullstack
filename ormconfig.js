@@ -1,7 +1,3 @@
-import Category from './src/models/Category';
-import Product from './src/models/Product';
-import User from './src/models/User';
-
 console.log(`database: ${process.env.PG_DATABASE}`);
 
 module.exports = {
@@ -13,7 +9,7 @@ module.exports = {
   database: process.env.PG_DATABASE,
   synchronize: true,
   logging: true,
-  entities: [User, Category, Product],
+  entities: ['src/models/**/*.ts'],
   subscribers: [],
   migrations: ['src/database/migrations/**/*.ts'],
   ssl: true,
