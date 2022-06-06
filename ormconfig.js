@@ -9,9 +9,15 @@ module.exports = {
   database: process.env.PG_DATABASE,
   synchronize: true,
   logging: true,
-  entities: ['src/models/**/*.ts'],
+  entities: ['dist/models/**/*.js'],
   subscribers: [],
-  migrations: ['src/database/migrations/**/*.ts'],
+  migrations: ['dist/database/migrations/**/*.js'],
+  cli:{
+    migrationsDir: [
+      "src/database/migrations/"
+    ],
+    entitiesDir: "src/models"
+  },
   ssl: true,
   extra: {
     ssl: {
