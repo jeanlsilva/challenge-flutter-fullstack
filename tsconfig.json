@@ -71,7 +71,7 @@
   "ts-node": {
     "esm": true,
   },
-  "include": ["src/**/*", "ormconfig.js"],
+  "include": ["src/**/*"],
   "exclude": [
       "./plugins/**/*",
       "./typings/**/*",
