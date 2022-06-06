@@ -16,4 +16,10 @@ module.exports = {
   entities: [User, Category, Product],
   subscribers: [],
   migrations: ['src/database/migrations/**/*.ts'],
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
 };
