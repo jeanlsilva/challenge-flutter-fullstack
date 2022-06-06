@@ -5,7 +5,7 @@ import {
   TableForeignKey,
 } from 'typeorm';
 
-export default class CreateRelationshipCategoryProduct1620664663573
+export default class CreateRelationshipCategoryProduct1654509373183
   implements MigrationInterface
 {
   public async up(queryRunner: QueryRunner): Promise<void> {
